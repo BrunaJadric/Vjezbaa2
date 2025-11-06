@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtime = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cbMjestoRođenja = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.dtpDatumRođenja = new System.Windows.Forms.DateTimePicker();
+            this.dtpDatumRodenja = new System.Windows.Forms.DateTimePicker();
             this.label4 = new System.Windows.Forms.Label();
             this.cbB = new System.Windows.Forms.CheckBox();
             this.cbC = new System.Windows.Forms.CheckBox();
@@ -41,7 +41,7 @@
             this.cbA = new System.Windows.Forms.CheckBox();
             this.label5 = new System.Windows.Forms.Label();
             this.nupIspit = new System.Windows.Forms.NumericUpDown();
-            this.label6 = new System.Windows.Forms.Label();
+            this.mtbMobilni = new System.Windows.Forms.Label();
             this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.rbMusko = new System.Windows.Forms.RadioButton();
@@ -62,13 +62,12 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Ime i prezime:";
             // 
-            // textBox1
+            // txtime
             // 
-            this.textBox1.Location = new System.Drawing.Point(86, 17);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(200, 20);
-            this.textBox1.TabIndex = 1;
-            this.textBox1.Text = "txt ime";
+            this.txtime.Location = new System.Drawing.Point(86, 17);
+            this.txtime.Name = "txtime";
+            this.txtime.Size = new System.Drawing.Size(200, 20);
+            this.txtime.TabIndex = 1;
             // 
             // label2
             // 
@@ -80,10 +79,10 @@
             this.label2.Text = "Mjesto rođenja:";
             this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
-            // comboBox1
+            // cbMjestoRođenja
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.cbMjestoRođenja.FormattingEnabled = true;
+            this.cbMjestoRođenja.Items.AddRange(new object[] {
             "Split",
             "Solin",
             "Dugopolje",
@@ -91,11 +90,10 @@
             "Imotski",
             "Sinj",
             "Zagreb"});
-            this.comboBox1.Location = new System.Drawing.Point(86, 48);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(202, 21);
-            this.comboBox1.TabIndex = 3;
-            this.comboBox1.Text = "cbMjestoRođenja";
+            this.cbMjestoRođenja.Location = new System.Drawing.Point(86, 48);
+            this.cbMjestoRođenja.Name = "cbMjestoRođenja";
+            this.cbMjestoRođenja.Size = new System.Drawing.Size(202, 21);
+            this.cbMjestoRođenja.TabIndex = 3;
             // 
             // label3
             // 
@@ -107,13 +105,13 @@
             this.label3.Text = "Datum rođenja:";
             this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
-            // dtpDatumRođenja
+            // dtpDatumRodenja
             // 
-            this.dtpDatumRođenja.Location = new System.Drawing.Point(86, 83);
-            this.dtpDatumRođenja.Name = "dtpDatumRođenja";
-            this.dtpDatumRođenja.Size = new System.Drawing.Size(202, 20);
-            this.dtpDatumRođenja.TabIndex = 5;
-            this.dtpDatumRođenja.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
+            this.dtpDatumRodenja.Location = new System.Drawing.Point(86, 83);
+            this.dtpDatumRodenja.Name = "dtpDatumRodenja";
+            this.dtpDatumRodenja.Size = new System.Drawing.Size(202, 20);
+            this.dtpDatumRodenja.TabIndex = 5;
+            this.dtpDatumRodenja.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
             // 
             // label4
             // 
@@ -183,14 +181,14 @@
             this.nupIspit.Size = new System.Drawing.Size(68, 20);
             this.nupIspit.TabIndex = 13;
             // 
-            // label6
+            // mtbMobilni
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(3, 189);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(43, 13);
-            this.label6.TabIndex = 14;
-            this.label6.Text = "Mobilni:";
+            this.mtbMobilni.AutoSize = true;
+            this.mtbMobilni.Location = new System.Drawing.Point(3, 189);
+            this.mtbMobilni.Name = "mtbMobilni";
+            this.mtbMobilni.Size = new System.Drawing.Size(43, 13);
+            this.mtbMobilni.TabIndex = 14;
+            this.mtbMobilni.Text = "Mobilni:";
             // 
             // maskedTextBox1
             // 
@@ -288,7 +286,7 @@
             this.Controls.Add(this.rbMusko);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.maskedTextBox1);
-            this.Controls.Add(this.label6);
+            this.Controls.Add(this.mtbMobilni);
             this.Controls.Add(this.nupIspit);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.cbA);
@@ -296,11 +294,11 @@
             this.Controls.Add(this.cbC);
             this.Controls.Add(this.cbB);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.dtpDatumRođenja);
+            this.Controls.Add(this.dtpDatumRodenja);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.cbMjestoRođenja);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtime);
             this.Controls.Add(this.label1);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -314,11 +312,11 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtime;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cbMjestoRođenja;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.DateTimePicker dtpDatumRođenja;
+        private System.Windows.Forms.DateTimePicker dtpDatumRodenja;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.CheckBox cbB;
         private System.Windows.Forms.CheckBox cbC;
@@ -326,7 +324,7 @@
         private System.Windows.Forms.CheckBox cbA;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.NumericUpDown nupIspit;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label mtbMobilni;
         private System.Windows.Forms.MaskedTextBox maskedTextBox1;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.RadioButton rbMusko;

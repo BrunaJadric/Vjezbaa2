@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.TaskbarClock;
 
 namespace Vjezbaa2
 {
@@ -54,6 +55,30 @@ namespace Vjezbaa2
 
         private void btnPotvrdi_Click(object sender, EventArgs e)
         {
+            string imePrezime, mjestoRodenja, vozackadozvola, mobilni, spol, fakultet;
+            DateTime datumRodjenja, danasnjiDatum;
+            int ukupanbrojispita=0;
+            imePrezime = txtime.Text;
+            mjestoRodenja = cbMjestoRođenja.SelectedItem.ToString();
+            vozackadozvola =cbB.Text;
+            mobilni= maskedTextBox1.Text;
+            if(rbMusko.Checked)
+            {
+                spol = "Muško";
+            }
+            else
+            {
+                spol = "Žensko";
+            }
+            fakultet = lbFakultet.SelectedItem.ToString();
+            datumRodjenja = dtpDatumRodenja.Value;
+            danasnjiDatum = DateTime.Now;
+            ukupanbrojispita.ToString();
+
+
+
+            MessageBox.Show("Ime i prezime: " + imePrezime + "\nMjesto rođenja: " + mjestoRodenja + "\nDatum rođenja: " + datumRodjenja.ToShortDateString() + "\nSpol: " + spol + "\nFakultet: " + fakultet + "\nVozacka dozvola: " + vozackadozvola + "\nMobilni: " + mobilni + ukupanbrojispita + "\nUkupan broj ispita: ");
+
 
         }
     }
